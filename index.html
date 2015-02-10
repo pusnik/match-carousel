@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Match Carousel">
+    <meta name="author" content="Grega Pusnik">
+
+    <title>Match Carousel</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+    	<div class="owl-carousel"></div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    
+    <!-- START Match Carousel specific imports -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href='owl-carousel/owl.carousel.css' rel='stylesheet'>
+    <link href='owl-carousel/owl.theme.css' rel='stylesheet'>
+    <script src='owl-carousel/owl.carousel.min.js'></script>"
+	<script src="js/matches.js"></script>
+	<!-- END Match Carousel specific imports -->
+	<script>
+		$(document).ready(function(){
+			$("container").matchCarousel({maxMatches:50, sports:["Soccer", "Basketball"]});
+		});
+	</script>
+	</body>
+</html>
