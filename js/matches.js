@@ -246,6 +246,7 @@
 		 */
 		
 		var json = $.getJSON(options.URL, function(data) {
+			var breakFlag = true;
   			$.each(data.doc, function(i, v) {
   				$.each(v.data, function(j, el) {
   					if ($.inArray(el.name, options.sports) != -1) {
@@ -264,22 +265,30 @@
             															new Status (match.status._id, match.status.name), 
             															match.result.home, match.result.away);
             							matches.push(currentMatch);
-            						}						
+            							
+            						}
+            						else
+            							breakFlag = false; //set the break flag and break out of JSON parsing loop
+            							
+            						return breakFlag;					
             					}); //end of matches	
             					aTournament.setMatches(matches);
             					tournaments.push(aTournament);
             					matches = []; //clear matches array
+            					return breakFlag;
             				}); //end of tournaments
             				aCategory.setTournaments(tournaments)
             				categories.push(aCategory);
             				tournaments = []; //clear tournaments array;
+            				return breakFlag;
             			}); // end of categories
             			aSport.setCategories(categories);
             			sports.push(aSport);
-            			categories = []; //clear categories array
+            			categories = []; //clear categories array		
 					}
-  			
+  					return breakFlag;
   				});	//end of data
+  				return breakFlag;
        		 });	//end of json
 		})	//end of parsing
 		.fail(function() {
