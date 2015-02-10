@@ -331,7 +331,7 @@
 				 															"<p class='text-center visible-xs'>"+match.awayTeam.shortName+"</p>"+
 																		"</div>"+
 																	"</div>"+
-																	"<div class='row'>"+
+																	"<div class='row bottomRow'>"+
 																		"<div class='col-md-4 col-md-offset-4 top-margin-40'>"+
 																			"<p class='status "+match.status.getStatusDIVClass()+"'>"+match.status.name+"</p>"+
 																		"</div>"+
