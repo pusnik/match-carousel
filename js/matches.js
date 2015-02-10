@@ -314,10 +314,10 @@
   						$.each(tournament.matches, function(l, match) {
 								owl.data('owlCarousel').addItem("<div class='match-container "+match.status.getStatusDIVClass()+"'>"+
             														"<div class='row'>"+
-        																"<div class='col-md-12'>"+
+        																"<div class='col-xs-12'>"+
             																tournament.getTournamentParagraph()+
             															"</div>"+
-            															"<div class='col-md-8 col-md-offset-2'>"+
+            															"<div class='col-xs-8 col-xs-offset-2'>"+
             																"<p class='text-center subtitle'>"+category.name+"</p>"+
             															"</div>"+
             														"</div>"+
@@ -331,7 +331,7 @@
 																		"</div>"+
 																	"</div>"+
 																	match.getMatchRow()+
-																		"<div class='col-xs-5 col-md-5'>"+
+																		"<div class='col-xs-5'>"+
 																			"<p class='text-center hidden-xs'>"+match.homeTeam.name+"</p>"+
 																			"<p class='text-center visible-xs'>"+match.homeTeam.shortName+"</p>"+
 																		"</div>"+
@@ -341,7 +341,7 @@
 																		"</div>"+
 																	"</div>"+
 																	"<div class='row bottomRow'>"+
-																		"<div class='col-md-4 col-md-offset-4 top-margin-40'>"+
+																		"<div class='col-xs-4 col-xs-offset-4 top-margin-40'>"+
 																			"<p class='status "+match.status.getStatusDIVClass()+"'>"+match.status.name+"</p>"+
 																		"</div>"+
 																	"</div>"+
