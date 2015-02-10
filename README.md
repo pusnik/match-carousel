@@ -1,5 +1,5 @@
 # match-carousel
-jQuery plugin to display matches in a caraousel parsed from json file.
+jQuery plugin to display a caraousel of matches parsed from JSON file.
 
 Import:
 ```
